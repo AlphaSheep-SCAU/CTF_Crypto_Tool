@@ -1,0 +1,1 @@
+G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\bin\Debug\CTF_Crypto_Tool.exe.config
