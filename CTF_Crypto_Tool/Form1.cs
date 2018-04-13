@@ -16,5 +16,11 @@ namespace CTF_Crypto_Tool
         {
             InitializeComponent();
         }
+
+        private void buttonCeasarForm_Click(object sender, EventArgs e)
+        {
+            crypto.CeasarForm cf = new crypto.CeasarForm();
+            cf.ShowDialog();
+        }
     }
 }
