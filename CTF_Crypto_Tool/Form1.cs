@@ -22,5 +22,11 @@ namespace CTF_Crypto_Tool
             crypto.CeasarForm cf = new crypto.CeasarForm();
             cf.ShowDialog();
         }
+
+        private void buttonFenceForm_Click(object sender, EventArgs e)
+        {
+            crypto.FenceForm ff = new crypto.FenceForm();
+            ff.ShowDialog();
+        }
     }
 }

@@ -8,3 +8,4 @@ G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.Properties.Reso
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.csproj.GenerateResource.Cache
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.exe
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.pdb
+G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.FenceForm.resources

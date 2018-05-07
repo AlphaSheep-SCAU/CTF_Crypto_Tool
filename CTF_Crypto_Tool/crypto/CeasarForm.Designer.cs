@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBoxCeasar = new System.Windows.Forms.GroupBox();
-            this.labelChipper = new System.Windows.Forms.Label();
-            this.textBoxchipper = new System.Windows.Forms.TextBox();
-            this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.modeComboBox = new System.Windows.Forms.ComboBox();
             this.buttonExectute = new System.Windows.Forms.Button();
+            this.modeComboBox = new System.Windows.Forms.ComboBox();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
+            this.textBoxchipper = new System.Windows.Forms.TextBox();
+            this.labelChipper = new System.Windows.Forms.Label();
             this.groupBoxKeyCeasar = new System.Windows.Forms.GroupBox();
+            this.buttonKeyDecrypto = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.buttonKeyEncrypto = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.buttonKeyDecrypto = new System.Windows.Forms.Button();
             this.groupBoxCeasar.SuspendLayout();
             this.groupBoxKeyCeasar.SuspendLayout();
             this.SuspendLayout();
@@ -61,44 +61,6 @@
             this.groupBoxCeasar.TabStop = false;
             this.groupBoxCeasar.Text = "一般凯撒加解密";
             // 
-            // labelChipper
-            // 
-            this.labelChipper.AutoSize = true;
-            this.labelChipper.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelChipper.Location = new System.Drawing.Point(12, 56);
-            this.labelChipper.Name = "labelChipper";
-            this.labelChipper.Size = new System.Drawing.Size(69, 20);
-            this.labelChipper.TabIndex = 0;
-            this.labelChipper.Text = "密文：";
-            // 
-            // textBoxchipper
-            // 
-            this.textBoxchipper.Location = new System.Drawing.Point(81, 43);
-            this.textBoxchipper.Multiline = true;
-            this.textBoxchipper.Name = "textBoxchipper";
-            this.textBoxchipper.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxchipper.Size = new System.Drawing.Size(596, 49);
-            this.textBoxchipper.TabIndex = 1;
-            // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Location = new System.Drawing.Point(81, 224);
-            this.textBoxResult.Multiline = true;
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxResult.Size = new System.Drawing.Size(596, 76);
-            this.textBoxResult.TabIndex = 2;
-            // 
-            // modeComboBox
-            // 
-            this.modeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.modeComboBox.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.modeComboBox.FormattingEnabled = true;
-            this.modeComboBox.Location = new System.Drawing.Point(285, 154);
-            this.modeComboBox.Name = "modeComboBox";
-            this.modeComboBox.Size = new System.Drawing.Size(170, 28);
-            this.modeComboBox.TabIndex = 3;
-            // 
             // buttonExectute
             // 
             this.buttonExectute.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -110,6 +72,44 @@
             this.buttonExectute.Text = "↓";
             this.buttonExectute.UseVisualStyleBackColor = true;
             this.buttonExectute.Click += new System.EventHandler(this.buttonExectute_Click);
+            // 
+            // modeComboBox
+            // 
+            this.modeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.modeComboBox.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.modeComboBox.FormattingEnabled = true;
+            this.modeComboBox.Location = new System.Drawing.Point(285, 154);
+            this.modeComboBox.Name = "modeComboBox";
+            this.modeComboBox.Size = new System.Drawing.Size(177, 28);
+            this.modeComboBox.TabIndex = 3;
+            // 
+            // textBoxResult
+            // 
+            this.textBoxResult.Location = new System.Drawing.Point(81, 224);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxResult.Size = new System.Drawing.Size(596, 76);
+            this.textBoxResult.TabIndex = 2;
+            // 
+            // textBoxchipper
+            // 
+            this.textBoxchipper.Location = new System.Drawing.Point(81, 43);
+            this.textBoxchipper.Multiline = true;
+            this.textBoxchipper.Name = "textBoxchipper";
+            this.textBoxchipper.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxchipper.Size = new System.Drawing.Size(596, 49);
+            this.textBoxchipper.TabIndex = 1;
+            // 
+            // labelChipper
+            // 
+            this.labelChipper.AutoSize = true;
+            this.labelChipper.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelChipper.Location = new System.Drawing.Point(12, 56);
+            this.labelChipper.Name = "labelChipper";
+            this.labelChipper.Size = new System.Drawing.Size(69, 20);
+            this.labelChipper.TabIndex = 0;
+            this.labelChipper.Text = "密文：";
             // 
             // groupBoxKeyCeasar
             // 
@@ -127,6 +127,37 @@
             this.groupBoxKeyCeasar.TabIndex = 1;
             this.groupBoxKeyCeasar.TabStop = false;
             this.groupBoxKeyCeasar.Text = "基于密钥凯撒加解密";
+            // 
+            // buttonKeyDecrypto
+            // 
+            this.buttonKeyDecrypto.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonKeyDecrypto.Font = new System.Drawing.Font("宋体", 12F);
+            this.buttonKeyDecrypto.Location = new System.Drawing.Point(575, 168);
+            this.buttonKeyDecrypto.Name = "buttonKeyDecrypto";
+            this.buttonKeyDecrypto.Size = new System.Drawing.Size(102, 35);
+            this.buttonKeyDecrypto.TabIndex = 7;
+            this.buttonKeyDecrypto.Text = "解密";
+            this.buttonKeyDecrypto.UseVisualStyleBackColor = true;
+            this.buttonKeyDecrypto.Click += new System.EventHandler(this.buttonEnOrDeCrypto_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(87, 136);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox4.Size = new System.Drawing.Size(467, 49);
+            this.textBox4.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("宋体", 12F);
+            this.label3.Location = new System.Drawing.Point(12, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "密钥：";
             // 
             // buttonKeyEncrypto
             // 
@@ -167,37 +198,6 @@
             this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "密文：";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 12F);
-            this.label3.Location = new System.Drawing.Point(12, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "密钥：";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(87, 136);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox4.Size = new System.Drawing.Size(467, 49);
-            this.textBox4.TabIndex = 6;
-            // 
-            // buttonKeyDecrypto
-            // 
-            this.buttonKeyDecrypto.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonKeyDecrypto.Font = new System.Drawing.Font("宋体", 12F);
-            this.buttonKeyDecrypto.Location = new System.Drawing.Point(575, 168);
-            this.buttonKeyDecrypto.Name = "buttonKeyDecrypto";
-            this.buttonKeyDecrypto.Size = new System.Drawing.Size(102, 35);
-            this.buttonKeyDecrypto.TabIndex = 7;
-            this.buttonKeyDecrypto.Text = "解密";
-            this.buttonKeyDecrypto.UseVisualStyleBackColor = true;
-            this.buttonKeyDecrypto.Click += new System.EventHandler(this.buttonEnOrDeCrypto_Click);
             // 
             // CeasarForm
             // 

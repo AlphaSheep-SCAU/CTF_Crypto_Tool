@@ -52,6 +52,12 @@
     <Compile Include="crypto\CeasarForm.Designer.cs">
       <DependentUpon>CeasarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crypto\FenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crypto\FenceForm.Designer.cs">
+      <DependentUpon>FenceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="crypto\CeasarForm.resx">
       <DependentUpon>CeasarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crypto\FenceForm.resx">
+      <DependentUpon>FenceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
