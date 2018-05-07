@@ -35,11 +35,7 @@ namespace CTF_Crypto_Tool.crypto
             string[] temp = new string[chiper_length/group_num];
             for(int i = 0; i < chiper_length; i++)
             {
-                for(int j = 0; j < group_num; j++)
-                {
-                    temp[i, j] = "";
-                    temp[i, j] += chiper[i * group_num + j];
-                }
+                
             }
             Console.Write(temp);
         }

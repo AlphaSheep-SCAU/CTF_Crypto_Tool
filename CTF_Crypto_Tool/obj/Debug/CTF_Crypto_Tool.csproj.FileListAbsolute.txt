@@ -3,9 +3,9 @@ G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\bin\Debug\CTF_Crypto_Tool.exe
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\bin\Debug\CTF_Crypto_Tool.pdb
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.csprojResolveAssemblyReference.cache
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.CeasarForm.resources
-G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.Form1.resources
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.Properties.Resources.resources
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.csproj.GenerateResource.Cache
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.exe
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.pdb
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.FenceForm.resources
+G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.MainForm.resources
