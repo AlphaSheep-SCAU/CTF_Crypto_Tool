@@ -12,6 +12,8 @@ namespace CTF_Crypto_Tool.crypto
 {
     public partial class CeasarForm : Form
     {
+        private cryptocs.CeasarCrypto cry;
+
         public CeasarForm()
         {
             InitializeComponent();
@@ -20,63 +22,48 @@ namespace CTF_Crypto_Tool.crypto
 
         private void InitData()
         {
-            modeComboBox.Items.Add("ListAllResult");
-            modeComboBox.SelectedIndex = 0;
             for(int i = 1; i <= 25; i++)
             {
-                modeComboBox.Items.Add("Rot" + i);
+                modeComboBox.Items.Add(i);
             }
+            modeComboBox.SelectedIndex = 0;
+            cry = new cryptocs.CeasarCrypto("", 0);
         }
 
-        private void buttonExectute_Click(object sender, EventArgs e)
+        private void buttonEncrypt_Click(object sender, EventArgs e)
         {
             textBoxResult.Text = "";
-            string chipper = textBoxchipper.Text;
-            int mode = modeComboBox.SelectedIndex;
-            if(mode == 0)
-            {
-                for(int i = 1; i <= 25; i++)
-                {
-                    textBoxResult.Text += RotN(chipper, i) + '\r' + '\n';
-                }
-            }
-            else
-            {
-                textBoxResult.Text += RotN(chipper, mode);
-            }
+            cry.Message = textBoxchipper.Text;
+            cry.ShiftNumber = modeComboBox.SelectedIndex + 1;
+            //cryptocs.CeasarCrypto cry = new cryptocs.CeasarCrypto(message, mode);
+            cry.Encrypt();
+            textBoxResult.Text += cry.CipherText;
         }
 
-        private string RotN(string s ,int n)
+        private void buttonDecrypt_Click(object sender, EventArgs e)
         {
-            string t = "";
-            for(int i = 0; i < s.Length; i++)
-            {
-                char c = s[i];
-                if(c < 65 || (c > 90 && c < 97) || c > 122)
-                {
-                    t += c;
-                    continue;
-                }
-                else
-                {
-                    if(c >= 65 && c <= 90 && c + n > 90)
-                    {
-                        t += (char)((c + n) - 26);
-                    }
-                    else if(c >= 97 && c <= 122 && c + n > 122)
-                    {
-                        t += (char)((c + n) - 26);
-                    }
-                    else
-                    {
-                        t += (char)(c + n);
-                    }
-                }
-                
-            }
-            return t;
+            textBoxResult.Text = "";
+            cry.Message = textBoxchipper.Text;
+            cry.ShiftNumber = modeComboBox.SelectedIndex + 1;
+            //cryptocs.CeasarCrypto cry = new cryptocs.CeasarCrypto(message, mode);
+            cry.Decrypt();
+            textBoxResult.Text += cry.ClearText;
         }
 
+        private void buttonListAllResult_Click(object sender, EventArgs e)
+        {
+            textBoxResult.Text = "";
+            cry.Message = textBoxchipper.Text;
+            for (int i = 1; i <= 25; i++)
+            {
+                //cryptocs.CeasarCrypto cry = new cryptocs.CeasarCrypto(cipher, i);
+                cry.ShiftNumber = i;
+                cry.Encrypt();
+                textBoxResult.Text += cry.CipherText + '\r' + '\n';
+            }
+        }
+
+        /* 
         private void buttonEnOrDeCrypto_Click(object sender, EventArgs e)
         {
             string chipper = textBox2.Text;
@@ -91,30 +78,8 @@ namespace CTF_Crypto_Tool.crypto
                 addOrSub = 1;
             if((sender as Button).Text == "解密")
                 addOrSub = -1;
-            int keyIndex = 0;
-            string t = "";
-            for(int i = 0; i < chipper.Length; i++)
-            {
-                int tc = 0;
-                if (chipper[i] < 65 || (chipper[i] > 90 && chipper[i] < 97) || chipper[i] > 122)
-                    tc = chipper[i];
-                else if(chipper[i] >= 65 && chipper[i] <= 90)
-                {
-                    tc = (chipper[i] + addOrSub * keyArray[keyIndex++]);
-                    if (tc > 90) tc -= 26;
-                    if (tc < 65) tc += 26;
-                }
-                else if (chipper[i] >= 97 && chipper[i] <= 122)
-                {
-                    tc = (chipper[i] + addOrSub * keyArray[keyIndex++]);
-                    if (tc > 122) tc -= 26;
-                    if (tc < 97) tc += 26;
-                }
-                t += (char)tc;
-                keyIndex %= keyArray.Length;
-                //MessageBox.Show((keyArray[i].ToString()));
-            }
-            textBox1.Text = t;
-        }
+
+         //   textBox1.Text = t;
+        }*/
     }
 }

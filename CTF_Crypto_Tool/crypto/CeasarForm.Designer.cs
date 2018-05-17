@@ -29,182 +29,136 @@
         private void InitializeComponent()
         {
             this.groupBoxCeasar = new System.Windows.Forms.GroupBox();
-            this.buttonExectute = new System.Windows.Forms.Button();
+            this.labelMode = new System.Windows.Forms.Label();
+            this.buttonListAllResult = new System.Windows.Forms.Button();
+            this.buttonDecrypt = new System.Windows.Forms.Button();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.buttonEncrypt = new System.Windows.Forms.Button();
             this.modeComboBox = new System.Windows.Forms.ComboBox();
-            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.textBoxchipper = new System.Windows.Forms.TextBox();
             this.labelChipper = new System.Windows.Forms.Label();
-            this.groupBoxKeyCeasar = new System.Windows.Forms.GroupBox();
-            this.buttonKeyDecrypto = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonKeyEncrypto = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.groupBoxCeasar.SuspendLayout();
-            this.groupBoxKeyCeasar.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxCeasar
             // 
-            this.groupBoxCeasar.Controls.Add(this.buttonExectute);
-            this.groupBoxCeasar.Controls.Add(this.modeComboBox);
+            this.groupBoxCeasar.Controls.Add(this.labelMode);
             this.groupBoxCeasar.Controls.Add(this.textBoxResult);
+            this.groupBoxCeasar.Controls.Add(this.buttonListAllResult);
+            this.groupBoxCeasar.Controls.Add(this.buttonDecrypt);
+            this.groupBoxCeasar.Controls.Add(this.labelTitle);
+            this.groupBoxCeasar.Controls.Add(this.buttonEncrypt);
+            this.groupBoxCeasar.Controls.Add(this.modeComboBox);
             this.groupBoxCeasar.Controls.Add(this.textBoxchipper);
             this.groupBoxCeasar.Controls.Add(this.labelChipper);
             this.groupBoxCeasar.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxCeasar.Location = new System.Drawing.Point(0, 0);
             this.groupBoxCeasar.Name = "groupBoxCeasar";
-            this.groupBoxCeasar.Size = new System.Drawing.Size(729, 342);
+            this.groupBoxCeasar.Size = new System.Drawing.Size(729, 511);
             this.groupBoxCeasar.TabIndex = 0;
             this.groupBoxCeasar.TabStop = false;
             this.groupBoxCeasar.Text = "一般凯撒加解密";
             // 
-            // buttonExectute
+            // labelMode
             // 
-            this.buttonExectute.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonExectute.Font = new System.Drawing.Font("宋体", 60F);
-            this.buttonExectute.Location = new System.Drawing.Point(524, 109);
-            this.buttonExectute.Name = "buttonExectute";
-            this.buttonExectute.Size = new System.Drawing.Size(102, 109);
-            this.buttonExectute.TabIndex = 4;
-            this.buttonExectute.Text = "↓";
-            this.buttonExectute.UseVisualStyleBackColor = true;
-            this.buttonExectute.Click += new System.EventHandler(this.buttonExectute_Click);
+            this.labelMode.AutoSize = true;
+            this.labelMode.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelMode.Location = new System.Drawing.Point(373, 155);
+            this.labelMode.Name = "labelMode";
+            this.labelMode.Size = new System.Drawing.Size(129, 20);
+            this.labelMode.TabIndex = 8;
+            this.labelMode.Text = "选择位移数：";
+            // 
+            // buttonListAllResult
+            // 
+            this.buttonListAllResult.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonListAllResult.Font = new System.Drawing.Font("幼圆", 11F);
+            this.buttonListAllResult.Location = new System.Drawing.Point(158, 151);
+            this.buttonListAllResult.Name = "buttonListAllResult";
+            this.buttonListAllResult.Size = new System.Drawing.Size(154, 28);
+            this.buttonListAllResult.TabIndex = 7;
+            this.buttonListAllResult.Text = "列出所有结果";
+            this.buttonListAllResult.UseVisualStyleBackColor = true;
+            this.buttonListAllResult.Click += new System.EventHandler(this.buttonListAllResult_Click);
+            // 
+            // buttonDecrypt
+            // 
+            this.buttonDecrypt.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonDecrypt.Font = new System.Drawing.Font("幼圆", 11F);
+            this.buttonDecrypt.Location = new System.Drawing.Point(87, 151);
+            this.buttonDecrypt.Name = "buttonDecrypt";
+            this.buttonDecrypt.Size = new System.Drawing.Size(65, 28);
+            this.buttonDecrypt.TabIndex = 6;
+            this.buttonDecrypt.Text = "解密";
+            this.buttonDecrypt.UseVisualStyleBackColor = true;
+            this.buttonDecrypt.Click += new System.EventHandler(this.buttonDecrypt_Click);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTitle.Location = new System.Drawing.Point(12, 36);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(89, 20);
+            this.labelTitle.TabIndex = 5;
+            this.labelTitle.Text = "凯撒加密";
+            // 
+            // buttonEncrypt
+            // 
+            this.buttonEncrypt.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonEncrypt.Font = new System.Drawing.Font("幼圆", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEncrypt.Location = new System.Drawing.Point(16, 151);
+            this.buttonEncrypt.Name = "buttonEncrypt";
+            this.buttonEncrypt.Size = new System.Drawing.Size(65, 28);
+            this.buttonEncrypt.TabIndex = 4;
+            this.buttonEncrypt.Text = "加密";
+            this.buttonEncrypt.UseVisualStyleBackColor = true;
+            this.buttonEncrypt.Click += new System.EventHandler(this.buttonEncrypt_Click);
             // 
             // modeComboBox
             // 
             this.modeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modeComboBox.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.modeComboBox.FormattingEnabled = true;
-            this.modeComboBox.Location = new System.Drawing.Point(285, 154);
+            this.modeComboBox.Location = new System.Drawing.Point(523, 151);
             this.modeComboBox.Name = "modeComboBox";
             this.modeComboBox.Size = new System.Drawing.Size(177, 28);
             this.modeComboBox.TabIndex = 3;
             // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Location = new System.Drawing.Point(81, 224);
-            this.textBoxResult.Multiline = true;
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxResult.Size = new System.Drawing.Size(596, 76);
-            this.textBoxResult.TabIndex = 2;
-            // 
             // textBoxchipper
             // 
-            this.textBoxchipper.Location = new System.Drawing.Point(81, 43);
+            this.textBoxchipper.Location = new System.Drawing.Point(16, 102);
             this.textBoxchipper.Multiline = true;
             this.textBoxchipper.Name = "textBoxchipper";
             this.textBoxchipper.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxchipper.Size = new System.Drawing.Size(596, 49);
+            this.textBoxchipper.Size = new System.Drawing.Size(684, 43);
             this.textBoxchipper.TabIndex = 1;
             // 
             // labelChipper
             // 
             this.labelChipper.AutoSize = true;
             this.labelChipper.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelChipper.Location = new System.Drawing.Point(12, 56);
+            this.labelChipper.Location = new System.Drawing.Point(12, 79);
             this.labelChipper.Name = "labelChipper";
-            this.labelChipper.Size = new System.Drawing.Size(69, 20);
+            this.labelChipper.Size = new System.Drawing.Size(689, 20);
             this.labelChipper.TabIndex = 0;
-            this.labelChipper.Text = "密文：";
+            this.labelChipper.Text = "在下面的文本框输入明文或密文，点加密或解密，文本框中即可出现所得结果";
             // 
-            // groupBoxKeyCeasar
+            // textBoxResult
             // 
-            this.groupBoxKeyCeasar.Controls.Add(this.buttonKeyDecrypto);
-            this.groupBoxKeyCeasar.Controls.Add(this.textBox4);
-            this.groupBoxKeyCeasar.Controls.Add(this.label3);
-            this.groupBoxKeyCeasar.Controls.Add(this.buttonKeyEncrypto);
-            this.groupBoxKeyCeasar.Controls.Add(this.textBox1);
-            this.groupBoxKeyCeasar.Controls.Add(this.textBox2);
-            this.groupBoxKeyCeasar.Controls.Add(this.label1);
-            this.groupBoxKeyCeasar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxKeyCeasar.Location = new System.Drawing.Point(0, 342);
-            this.groupBoxKeyCeasar.Name = "groupBoxKeyCeasar";
-            this.groupBoxKeyCeasar.Size = new System.Drawing.Size(729, 342);
-            this.groupBoxKeyCeasar.TabIndex = 1;
-            this.groupBoxKeyCeasar.TabStop = false;
-            this.groupBoxKeyCeasar.Text = "基于密钥凯撒加解密";
-            // 
-            // buttonKeyDecrypto
-            // 
-            this.buttonKeyDecrypto.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonKeyDecrypto.Font = new System.Drawing.Font("宋体", 12F);
-            this.buttonKeyDecrypto.Location = new System.Drawing.Point(575, 168);
-            this.buttonKeyDecrypto.Name = "buttonKeyDecrypto";
-            this.buttonKeyDecrypto.Size = new System.Drawing.Size(102, 35);
-            this.buttonKeyDecrypto.TabIndex = 7;
-            this.buttonKeyDecrypto.Text = "解密";
-            this.buttonKeyDecrypto.UseVisualStyleBackColor = true;
-            this.buttonKeyDecrypto.Click += new System.EventHandler(this.buttonEnOrDeCrypto_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(87, 136);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox4.Size = new System.Drawing.Size(467, 49);
-            this.textBox4.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 12F);
-            this.label3.Location = new System.Drawing.Point(12, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "密钥：";
-            // 
-            // buttonKeyEncrypto
-            // 
-            this.buttonKeyEncrypto.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonKeyEncrypto.Font = new System.Drawing.Font("宋体", 12F);
-            this.buttonKeyEncrypto.Location = new System.Drawing.Point(575, 118);
-            this.buttonKeyEncrypto.Name = "buttonKeyEncrypto";
-            this.buttonKeyEncrypto.Size = new System.Drawing.Size(102, 35);
-            this.buttonKeyEncrypto.TabIndex = 4;
-            this.buttonKeyEncrypto.Text = "加密";
-            this.buttonKeyEncrypto.UseVisualStyleBackColor = true;
-            this.buttonKeyEncrypto.Click += new System.EventHandler(this.buttonEnOrDeCrypto_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(81, 224);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(596, 76);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(81, 43);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(596, 49);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F);
-            this.label1.Location = new System.Drawing.Point(12, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "密文：";
+            this.textBoxResult.Location = new System.Drawing.Point(16, 199);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBoxResult.Size = new System.Drawing.Size(684, 278);
+            this.textBoxResult.TabIndex = 2;
             // 
             // CeasarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 715);
-            this.Controls.Add(this.groupBoxKeyCeasar);
+            this.ClientSize = new System.Drawing.Size(729, 523);
             this.Controls.Add(this.groupBoxCeasar);
             this.MaximizeBox = false;
             this.Name = "CeasarForm";
@@ -212,8 +166,6 @@
             this.Text = "CeasarForm";
             this.groupBoxCeasar.ResumeLayout(false);
             this.groupBoxCeasar.PerformLayout();
-            this.groupBoxKeyCeasar.ResumeLayout(false);
-            this.groupBoxKeyCeasar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -221,18 +173,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxCeasar;
-        private System.Windows.Forms.Button buttonExectute;
+        private System.Windows.Forms.Button buttonEncrypt;
         private System.Windows.Forms.ComboBox modeComboBox;
-        private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.TextBox textBoxchipper;
         private System.Windows.Forms.Label labelChipper;
-        private System.Windows.Forms.GroupBox groupBoxKeyCeasar;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonKeyEncrypto;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonKeyDecrypto;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Button buttonDecrypt;
+        private System.Windows.Forms.Button buttonListAllResult;
+        private System.Windows.Forms.Label labelMode;
+        private System.Windows.Forms.TextBox textBoxResult;
     }
 }
