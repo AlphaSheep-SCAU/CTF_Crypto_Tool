@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="crypto\cryptocs\CeasarCrypto.cs" />
     <Compile Include="crypto\cryptocs\Crypto.cs" />
+    <Compile Include="crypto\cryptocs\FenceCrypto.cs" />
     <Compile Include="crypto\FenceForm.cs">
       <SubType>Form</SubType>
     </Compile>

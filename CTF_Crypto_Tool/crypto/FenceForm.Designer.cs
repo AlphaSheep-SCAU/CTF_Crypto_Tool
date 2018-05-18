@@ -61,6 +61,7 @@
             this.buttonDecrypto.TabIndex = 1;
             this.buttonDecrypto.Text = "解密";
             this.buttonDecrypto.UseVisualStyleBackColor = true;
+            this.buttonDecrypto.Click += new System.EventHandler(this.buttonDecrypto_Click);
             // 
             // buttonEncryptoAll
             // 
@@ -71,6 +72,7 @@
             this.buttonEncryptoAll.TabIndex = 2;
             this.buttonEncryptoAll.Text = "列举加密";
             this.buttonEncryptoAll.UseVisualStyleBackColor = true;
+            this.buttonEncryptoAll.Click += new System.EventHandler(this.buttonEncryptoAll_Click);
             // 
             // buttonDecryptoAll
             // 
@@ -81,6 +83,7 @@
             this.buttonDecryptoAll.TabIndex = 3;
             this.buttonDecryptoAll.Text = "列举解密";
             this.buttonDecryptoAll.UseVisualStyleBackColor = true;
+            this.buttonDecryptoAll.Click += new System.EventHandler(this.buttonDecryptoAll_Click);
             // 
             // labelGroup
             // 
@@ -101,6 +104,7 @@
             this.textBoxGroup.Size = new System.Drawing.Size(100, 27);
             this.textBoxGroup.TabIndex = 7;
             this.textBoxGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxGroup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGroup_KeyPress);
             // 
             // checkBox
             // 

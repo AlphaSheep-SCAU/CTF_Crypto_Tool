@@ -12,32 +12,98 @@ namespace CTF_Crypto_Tool.crypto
 {
     public partial class FenceForm : Form
     {
-        private string chiper;
-        private int group_num;
+        private string message;
+        private int groupNumber;
+        private cryptocs.FenceCrypto cry;
 
         public FenceForm()
         {
             InitializeComponent();
+            cry = new cryptocs.FenceCrypto("", 0);
+        }
+
+        private bool CheckBlank()
+        {
+            message = textBoxChiper.Text;
+            message = message.Replace(" ", "");
+            message = message.Replace("\r", "");
+            message = message.Replace("\n", "");
+            if (message == "")
+            {
+                MessageBox.Show("没有输入明文或密文！");
+                return false;
+            }
+            return true;
+        }
+
+        private bool CheckGroup()
+        {
+            string group = textBoxGroup.Text;
+            if(group == "")
+            {
+                MessageBox.Show("没有输入栏数！");
+                return false;
+            }
+            return true;
         }
 
         private void buttonEncrypto_Click(object sender, EventArgs e)
         {
-            chiper = textBoxChiper.Text;
-            string group = textBoxGroup.Text;
-            chiper = chiper.Replace(" ","");
-            if(chiper == "" || group == "")
+            if (!CheckBlank() || ! CheckGroup()) return;
+            groupNumber = int.Parse(textBoxGroup.Text);
+            cry.Message = message;
+            cry.Group = groupNumber;
+            cry.Encrypt();
+            textBoxChiper.Text = cry.CipherText;
+        }
+
+        private void buttonDecrypto_Click(object sender, EventArgs e)
+        {
+            if (!CheckBlank() || !CheckGroup()) return;
+            groupNumber = int.Parse(textBoxGroup.Text);
+            cry.Message = message;
+            cry.Group = groupNumber;
+            cry.Decrypt();
+            textBoxChiper.Text = cry.ClearText;
+        }
+
+        private void buttonEncryptoAll_Click(object sender, EventArgs e)
+        {
+            if (!CheckBlank()) return;
+            cry.Message = message;
+            textBoxChiper.Text = "";
+            for(int i = 2; i <= message.Length / 2; i++)
             {
-                MessageBox.Show("没有输入明文或密文！");
-                return;
+                if (checkBox.Checked && message.Length % i != 0)
+                    continue;
+                cry.Group = i;
+                cry.Encrypt();
+                textBoxChiper.Text += i.ToString() + "栏：\r\n" + cry.CipherText + "\r\n";
             }
-            group_num = int.Parse(group);
-            int chiper_length = chiper.Length;
-            string[] temp = new string[chiper_length/group_num];
-            for(int i = 0; i < chiper_length; i++)
+        }
+
+        private void buttonDecryptoAll_Click(object sender, EventArgs e)
+        {
+            if (!CheckBlank()) return;
+            cry.Message = message;
+            textBoxChiper.Text = "";
+            for (int i = 2; i <= message.Length / 2; i++)
             {
-                
+                if (checkBox.Checked && message.Length % i != 0)
+                    continue;
+                cry.Group = i;
+                cry.Decrypt();
+                textBoxChiper.Text += i.ToString() + "栏：\r\n" + cry.ClearText + "\r\n";
             }
-            Console.Write(temp);
+        }
+
+        private void textBoxGroup_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8)
+            {
+                e.Handled = false;
+            }
         }
     }
 }
