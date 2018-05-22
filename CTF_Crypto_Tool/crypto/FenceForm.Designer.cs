@@ -35,10 +35,12 @@
             this.labelGroup = new System.Windows.Forms.Label();
             this.textBoxGroup = new System.Windows.Forms.TextBox();
             this.checkBox = new System.Windows.Forms.CheckBox();
-            this.textBoxChiper = new System.Windows.Forms.TextBox();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.labelCryptoText = new System.Windows.Forms.Label();
             this.labelTip = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.textBoxChipper = new System.Windows.Forms.TextBox();
+            this.labelTipText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonEncrypto
@@ -118,24 +120,24 @@
             this.checkBox.Text = "只列举完整匹配";
             this.checkBox.UseVisualStyleBackColor = true;
             // 
-            // textBoxChiper
+            // textBoxResult
             // 
-            this.textBoxChiper.Location = new System.Drawing.Point(26, 144);
-            this.textBoxChiper.Multiline = true;
-            this.textBoxChiper.Name = "textBoxChiper";
-            this.textBoxChiper.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxChiper.Size = new System.Drawing.Size(618, 334);
-            this.textBoxChiper.TabIndex = 9;
+            this.textBoxResult.Location = new System.Drawing.Point(26, 195);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxResult.Size = new System.Drawing.Size(618, 283);
+            this.textBoxResult.TabIndex = 9;
             // 
             // labelCryptoText
             // 
             this.labelCryptoText.AutoSize = true;
             this.labelCryptoText.Font = new System.Drawing.Font("宋体", 10F);
-            this.labelCryptoText.Location = new System.Drawing.Point(26, 124);
+            this.labelCryptoText.Location = new System.Drawing.Point(26, 170);
             this.labelCryptoText.Name = "labelCryptoText";
-            this.labelCryptoText.Size = new System.Drawing.Size(59, 17);
+            this.labelCryptoText.Size = new System.Drawing.Size(76, 17);
             this.labelCryptoText.TabIndex = 10;
-            this.labelCryptoText.Text = "密文框";
+            this.labelCryptoText.Text = "转换结果";
             // 
             // labelTip
             // 
@@ -157,15 +159,34 @@
             this.labelTitle.TabIndex = 12;
             this.labelTitle.Text = "栅栏密码";
             // 
+            // textBoxChipper
+            // 
+            this.textBoxChipper.Location = new System.Drawing.Point(26, 138);
+            this.textBoxChipper.Name = "textBoxChipper";
+            this.textBoxChipper.Size = new System.Drawing.Size(618, 25);
+            this.textBoxChipper.TabIndex = 13;
+            // 
+            // labelTipText
+            // 
+            this.labelTipText.AutoSize = true;
+            this.labelTipText.Font = new System.Drawing.Font("宋体", 10F);
+            this.labelTipText.Location = new System.Drawing.Point(26, 118);
+            this.labelTipText.Name = "labelTipText";
+            this.labelTipText.Size = new System.Drawing.Size(144, 17);
+            this.labelTipText.TabIndex = 14;
+            this.labelTipText.Text = "输入密文或者明文";
+            // 
             // FenceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 506);
+            this.Controls.Add(this.labelTipText);
+            this.Controls.Add(this.textBoxChipper);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelTip);
             this.Controls.Add(this.labelCryptoText);
-            this.Controls.Add(this.textBoxChiper);
+            this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.checkBox);
             this.Controls.Add(this.textBoxGroup);
             this.Controls.Add(this.labelGroup);
@@ -192,9 +213,11 @@
         private System.Windows.Forms.Label labelGroup;
         private System.Windows.Forms.TextBox textBoxGroup;
         private System.Windows.Forms.CheckBox checkBox;
-        private System.Windows.Forms.TextBox textBoxChiper;
+        private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.Label labelCryptoText;
         private System.Windows.Forms.Label labelTip;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.TextBox textBoxChipper;
+        private System.Windows.Forms.Label labelTipText;
     }
 }

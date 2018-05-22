@@ -24,7 +24,7 @@ namespace CTF_Crypto_Tool.crypto
 
         private bool CheckBlank()
         {
-            message = textBoxChiper.Text;
+            message = textBoxChipper.Text;
             message = message.Replace(" ", "");
             message = message.Replace("\r", "");
             message = message.Replace("\n", "");
@@ -54,7 +54,7 @@ namespace CTF_Crypto_Tool.crypto
             cry.Message = message;
             cry.Group = groupNumber;
             cry.Encrypt();
-            textBoxChiper.Text = cry.CipherText;
+            textBoxResult.Text = cry.CipherText;
         }
 
         private void buttonDecrypto_Click(object sender, EventArgs e)
@@ -64,21 +64,21 @@ namespace CTF_Crypto_Tool.crypto
             cry.Message = message;
             cry.Group = groupNumber;
             cry.Decrypt();
-            textBoxChiper.Text = cry.ClearText;
+            textBoxResult.Text = cry.ClearText;
         }
 
         private void buttonEncryptoAll_Click(object sender, EventArgs e)
         {
             if (!CheckBlank()) return;
             cry.Message = message;
-            textBoxChiper.Text = "";
+            textBoxResult.Text = "";
             for(int i = 2; i <= message.Length / 2; i++)
             {
                 if (checkBox.Checked && message.Length % i != 0)
                     continue;
                 cry.Group = i;
                 cry.Encrypt();
-                textBoxChiper.Text += i.ToString() + "栏：\r\n" + cry.CipherText + "\r\n";
+                textBoxResult.Text += i.ToString() + "栏：\r\n" + cry.CipherText + "\r\n";
             }
         }
 
@@ -86,14 +86,14 @@ namespace CTF_Crypto_Tool.crypto
         {
             if (!CheckBlank()) return;
             cry.Message = message;
-            textBoxChiper.Text = "";
+            textBoxResult.Text = "";
             for (int i = 2; i <= message.Length / 2; i++)
             {
                 if (checkBox.Checked && message.Length % i != 0)
                     continue;
                 cry.Group = i;
                 cry.Decrypt();
-                textBoxChiper.Text += i.ToString() + "栏：\r\n" + cry.ClearText + "\r\n";
+                textBoxResult.Text += i.ToString() + "栏：\r\n" + cry.ClearText + "\r\n";
             }
         }
 
