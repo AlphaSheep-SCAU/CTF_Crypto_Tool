@@ -22,10 +22,8 @@ namespace CTF_Crypto_Tool.crypto
 
         private void InitData()
         {
-            for(int i = 1; i <= 25; i++)
-            {
+            for (int i = 1; i < 26; i++)
                 modeComboBox.Items.Add(i);
-            }
             modeComboBox.SelectedIndex = 0;
             cry = new cryptocs.CeasarCrypto("", 0);
         }

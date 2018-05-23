@@ -30,6 +30,7 @@
         {
             this.groupBoxCeasar = new System.Windows.Forms.GroupBox();
             this.labelMode = new System.Windows.Forms.Label();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.buttonListAllResult = new System.Windows.Forms.Button();
             this.buttonDecrypt = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.modeComboBox = new System.Windows.Forms.ComboBox();
             this.textBoxchipper = new System.Windows.Forms.TextBox();
             this.labelChipper = new System.Windows.Forms.Label();
-            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.groupBoxCeasar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.groupBoxCeasar.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxCeasar.Location = new System.Drawing.Point(0, 0);
             this.groupBoxCeasar.Name = "groupBoxCeasar";
-            this.groupBoxCeasar.Size = new System.Drawing.Size(729, 511);
+            this.groupBoxCeasar.Size = new System.Drawing.Size(721, 511);
             this.groupBoxCeasar.TabIndex = 0;
             this.groupBoxCeasar.TabStop = false;
             this.groupBoxCeasar.Text = "一般凯撒加解密";
@@ -69,6 +69,15 @@
             this.labelMode.Size = new System.Drawing.Size(129, 20);
             this.labelMode.TabIndex = 8;
             this.labelMode.Text = "选择位移数：";
+            // 
+            // textBoxResult
+            // 
+            this.textBoxResult.Location = new System.Drawing.Point(16, 199);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxResult.Size = new System.Drawing.Size(684, 278);
+            this.textBoxResult.TabIndex = 2;
             // 
             // buttonListAllResult
             // 
@@ -98,7 +107,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTitle.Location = new System.Drawing.Point(12, 36);
+            this.labelTitle.Location = new System.Drawing.Point(12, 34);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(89, 20);
             this.labelTitle.TabIndex = 5;
@@ -138,27 +147,18 @@
             // labelChipper
             // 
             this.labelChipper.AutoSize = true;
-            this.labelChipper.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelChipper.Font = new System.Drawing.Font("宋体", 11F);
             this.labelChipper.Location = new System.Drawing.Point(12, 79);
             this.labelChipper.Name = "labelChipper";
-            this.labelChipper.Size = new System.Drawing.Size(689, 20);
+            this.labelChipper.Size = new System.Drawing.Size(655, 19);
             this.labelChipper.TabIndex = 0;
             this.labelChipper.Text = "在下面的文本框输入明文或密文，点加密或解密，文本框中即可出现所得结果";
-            // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Location = new System.Drawing.Point(16, 199);
-            this.textBoxResult.Multiline = true;
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBoxResult.Size = new System.Drawing.Size(684, 278);
-            this.textBoxResult.TabIndex = 2;
             // 
             // CeasarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 523);
+            this.ClientSize = new System.Drawing.Size(721, 523);
             this.Controls.Add(this.groupBoxCeasar);
             this.MaximizeBox = false;
             this.Name = "CeasarForm";

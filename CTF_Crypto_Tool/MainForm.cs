@@ -28,5 +28,17 @@ namespace CTF_Crypto_Tool
             crypto.FenceForm ff = new crypto.FenceForm();
             ff.ShowDialog();
         }
+
+        private void buttonVigenereForm_Click(object sender, EventArgs e)
+        {
+            crypto.VigenereForm vf = new crypto.VigenereForm();
+            vf.ShowDialog();
+        }
+
+        private void buttonMorseForm_Click(object sender, EventArgs e)
+        {
+            crypto.MorseForm mf = new crypto.MorseForm();
+            mf.ShowDialog();
+        }
     }
 }

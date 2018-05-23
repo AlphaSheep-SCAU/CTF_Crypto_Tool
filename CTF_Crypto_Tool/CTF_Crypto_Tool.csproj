@@ -55,12 +55,26 @@
     <Compile Include="crypto\cryptocs\CeasarCrypto.cs" />
     <Compile Include="crypto\cryptocs\Crypto.cs" />
     <Compile Include="crypto\cryptocs\FenceCrypto.cs" />
+    <Compile Include="crypto\cryptocs\VigenereCrypto.cs" />
     <Compile Include="crypto\FenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="crypto\FenceForm.Designer.cs">
       <DependentUpon>FenceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crypto\MorseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crypto\MorseForm.Designer.cs">
+      <DependentUpon>MorseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="crypto\VigenereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crypto\VigenereForm.Designer.cs">
+      <DependentUpon>VigenereForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datastruct\TreeNode.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +88,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crypto\FenceForm.resx">
       <DependentUpon>FenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crypto\MorseForm.resx">
+      <DependentUpon>MorseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crypto\VigenereForm.resx">
+      <DependentUpon>VigenereForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -30,6 +30,8 @@
         {
             this.buttonCeasarForm = new System.Windows.Forms.Button();
             this.buttonFenceForm = new System.Windows.Forms.Button();
+            this.buttonVigenereForm = new System.Windows.Forms.Button();
+            this.buttonMorseForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCeasarForm
@@ -52,14 +54,37 @@
             this.buttonFenceForm.UseVisualStyleBackColor = true;
             this.buttonFenceForm.Click += new System.EventHandler(this.buttonFenceForm_Click);
             // 
-            // Form1
+            // buttonVigenereForm
+            // 
+            this.buttonVigenereForm.Location = new System.Drawing.Point(286, 62);
+            this.buttonVigenereForm.Name = "buttonVigenereForm";
+            this.buttonVigenereForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonVigenereForm.TabIndex = 2;
+            this.buttonVigenereForm.Text = "维吉利亚密码";
+            this.buttonVigenereForm.UseVisualStyleBackColor = true;
+            this.buttonVigenereForm.Click += new System.EventHandler(this.buttonVigenereForm_Click);
+            // 
+            // buttonMorseForm
+            // 
+            this.buttonMorseForm.Location = new System.Drawing.Point(412, 62);
+            this.buttonMorseForm.Name = "buttonMorseForm";
+            this.buttonMorseForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonMorseForm.TabIndex = 3;
+            this.buttonMorseForm.Text = "摩斯密码";
+            this.buttonMorseForm.UseVisualStyleBackColor = true;
+            this.buttonMorseForm.Click += new System.EventHandler(this.buttonMorseForm_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 554);
+            this.Controls.Add(this.buttonMorseForm);
+            this.Controls.Add(this.buttonVigenereForm);
             this.Controls.Add(this.buttonFenceForm);
             this.Controls.Add(this.buttonCeasarForm);
-            this.Name = "Form1";
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -69,6 +94,8 @@
 
         private System.Windows.Forms.Button buttonCeasarForm;
         private System.Windows.Forms.Button buttonFenceForm;
+        private System.Windows.Forms.Button buttonVigenereForm;
+        private System.Windows.Forms.Button buttonMorseForm;
     }
 }
 
