@@ -78,6 +78,7 @@ namespace CTF_Crypto_Tool.datastruct
     public class BinaryTree<T>
     {
         private TreeNode<T> root;
+        private string findString;
 
         public BinaryTree(TreeNode<T> root)
         {
@@ -105,6 +106,11 @@ namespace CTF_Crypto_Tool.datastruct
         {
             get { return root; }
             set { root = value; }
+        }
+
+        public string FindString
+        {
+            get { return findString; }
         }
 
         public TreeNode<T> LChild
@@ -195,6 +201,26 @@ namespace CTF_Crypto_Tool.datastruct
                 Console.Write(ptr.Data);
                 PreOrder(ptr.LChild);
                 PreOrder(ptr.RChild);
+            }
+        }
+
+        public void FindData(TreeNode<char> tn, char data, string result)
+        {
+            if (tn.Data == '!')
+                return;
+            if (tn.Data == data)
+            {
+                findString = result;
+                return;
+            }
+            else
+            {
+                string re1 = result + '-';
+                string re2 = result + '.';
+                if (tn.LChild != null)
+                    FindData(tn.LChild, data, re1);
+                if (tn.RChild != null)
+                    FindData(tn.RChild, data, re2);
             }
         }
     }

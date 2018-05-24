@@ -34,11 +34,12 @@
             this.buttonEncrypt = new System.Windows.Forms.Button();
             this.buttonShowTable = new System.Windows.Forms.Button();
             this.labelPoint = new System.Windows.Forms.Label();
-            this.textBoxPoint = new System.Windows.Forms.TextBox();
-            this.textBoxLine = new System.Windows.Forms.TextBox();
+            this.textBoxDit = new System.Windows.Forms.TextBox();
+            this.textBoxDah = new System.Windows.Forms.TextBox();
             this.labelLine = new System.Windows.Forms.Label();
             this.textBoxMessage = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
+            this.labelTip2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -70,6 +71,7 @@
             this.buttonDecrypt.TabIndex = 8;
             this.buttonDecrypt.Text = "解密";
             this.buttonDecrypt.UseVisualStyleBackColor = true;
+            this.buttonDecrypt.Click += new System.EventHandler(this.buttonDecrypt_Click);
             // 
             // buttonEncrypt
             // 
@@ -80,6 +82,7 @@
             this.buttonEncrypt.TabIndex = 7;
             this.buttonEncrypt.Text = "加密";
             this.buttonEncrypt.UseVisualStyleBackColor = true;
+            this.buttonEncrypt.Click += new System.EventHandler(this.buttonEncrypt_Click);
             // 
             // buttonShowTable
             // 
@@ -90,6 +93,7 @@
             this.buttonShowTable.TabIndex = 9;
             this.buttonShowTable.Text = "显示码表";
             this.buttonShowTable.UseVisualStyleBackColor = true;
+            this.buttonShowTable.Click += new System.EventHandler(this.buttonShowTable_Click);
             // 
             // labelPoint
             // 
@@ -101,21 +105,23 @@
             this.labelPoint.TabIndex = 10;
             this.labelPoint.Text = "点：";
             // 
-            // textBoxPoint
+            // textBoxDit
             // 
-            this.textBoxPoint.Location = new System.Drawing.Point(74, 165);
-            this.textBoxPoint.Name = "textBoxPoint";
-            this.textBoxPoint.Size = new System.Drawing.Size(39, 25);
-            this.textBoxPoint.TabIndex = 11;
-            this.textBoxPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPoint_KeyPress);
+            this.textBoxDit.Location = new System.Drawing.Point(74, 165);
+            this.textBoxDit.Name = "textBoxDit";
+            this.textBoxDit.Size = new System.Drawing.Size(39, 25);
+            this.textBoxDit.TabIndex = 11;
+            this.textBoxDit.TextChanged += new System.EventHandler(this.textBoxDit_TextChanged);
+            this.textBoxDit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPoint_KeyPress);
             // 
-            // textBoxLine
+            // textBoxDah
             // 
-            this.textBoxLine.Location = new System.Drawing.Point(157, 165);
-            this.textBoxLine.Name = "textBoxLine";
-            this.textBoxLine.Size = new System.Drawing.Size(39, 25);
-            this.textBoxLine.TabIndex = 13;
-            this.textBoxLine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPoint_KeyPress);
+            this.textBoxDah.Location = new System.Drawing.Point(157, 165);
+            this.textBoxDah.Name = "textBoxDah";
+            this.textBoxDah.Size = new System.Drawing.Size(39, 25);
+            this.textBoxDah.TabIndex = 13;
+            this.textBoxDah.TextChanged += new System.EventHandler(this.textBoxDah_TextChanged);
+            this.textBoxDah.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPoint_KeyPress);
             // 
             // labelLine
             // 
@@ -134,24 +140,37 @@
             this.textBoxMessage.Size = new System.Drawing.Size(583, 25);
             this.textBoxMessage.TabIndex = 14;
             // 
-            // textBox1
+            // textBoxResult
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 196);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(583, 296);
-            this.textBox1.TabIndex = 15;
+            this.textBoxResult.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxResult.Location = new System.Drawing.Point(32, 196);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxResult.Size = new System.Drawing.Size(583, 296);
+            this.textBoxResult.TabIndex = 15;
+            // 
+            // labelTip2
+            // 
+            this.labelTip2.AutoSize = true;
+            this.labelTip2.Font = new System.Drawing.Font("宋体", 10F);
+            this.labelTip2.Location = new System.Drawing.Point(232, 170);
+            this.labelTip2.Name = "labelTip2";
+            this.labelTip2.Size = new System.Drawing.Size(324, 17);
+            this.labelTip2.TabIndex = 16;
+            this.labelTip2.Text = "解密时密码之间用/隔开,若出现@表示出错";
             // 
             // MorseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 526);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelTip2);
+            this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.textBoxMessage);
-            this.Controls.Add(this.textBoxLine);
+            this.Controls.Add(this.textBoxDah);
             this.Controls.Add(this.labelLine);
-            this.Controls.Add(this.textBoxPoint);
+            this.Controls.Add(this.textBoxDit);
             this.Controls.Add(this.labelPoint);
             this.Controls.Add(this.buttonShowTable);
             this.Controls.Add(this.buttonDecrypt);
@@ -174,10 +193,11 @@
         private System.Windows.Forms.Button buttonEncrypt;
         private System.Windows.Forms.Button buttonShowTable;
         private System.Windows.Forms.Label labelPoint;
-        private System.Windows.Forms.TextBox textBoxPoint;
-        private System.Windows.Forms.TextBox textBoxLine;
+        private System.Windows.Forms.TextBox textBoxDit;
+        private System.Windows.Forms.TextBox textBoxDah;
         private System.Windows.Forms.Label labelLine;
         private System.Windows.Forms.TextBox textBoxMessage;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxResult;
+        private System.Windows.Forms.Label labelTip2;
     }
 }
