@@ -158,6 +158,7 @@ namespace CTF_Crypto_Tool.crypto
             result = result.Replace('-', dah);
             result = result.Replace('.', dit);
             textBoxResult.Text = result;
+            
         }
 
         private void textBoxDit_TextChanged(object sender, EventArgs e)

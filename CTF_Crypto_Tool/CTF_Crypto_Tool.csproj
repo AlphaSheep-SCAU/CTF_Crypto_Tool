@@ -62,6 +62,12 @@
     <Compile Include="crypto\FenceForm.Designer.cs">
       <DependentUpon>FenceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crypto\MD5Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crypto\MD5Form.Designer.cs">
+      <DependentUpon>MD5Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="crypto\MorseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crypto\FenceForm.resx">
       <DependentUpon>FenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crypto\MD5Form.resx">
+      <DependentUpon>MD5Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crypto\MorseForm.resx">
       <DependentUpon>MorseForm.cs</DependentUpon>

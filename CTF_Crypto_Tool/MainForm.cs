@@ -40,5 +40,11 @@ namespace CTF_Crypto_Tool
             crypto.MorseForm mf = new crypto.MorseForm();
             mf.ShowDialog();
         }
+
+        private void buttonMD5_Click(object sender, EventArgs e)
+        {
+            crypto.MD5Form md5f = new crypto.MD5Form();
+            md5f.ShowDialog();
+        }
     }
 }
