@@ -46,15 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crypto\BaseWhatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crypto\BaseWhatForm.Designer.cs">
+      <DependentUpon>BaseWhatForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crypto\CeasarForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="crypto\CeasarForm.Designer.cs">
       <DependentUpon>CeasarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crypto\cryptocs\Base64Crypto.cs" />
     <Compile Include="crypto\cryptocs\CeasarCrypto.cs" />
     <Compile Include="crypto\cryptocs\Crypto.cs" />
     <Compile Include="crypto\cryptocs\FenceCrypto.cs" />
+    <Compile Include="crypto\cryptocs\MorseCrypto.cs" />
     <Compile Include="crypto\cryptocs\VigenereCrypto.cs" />
     <Compile Include="crypto\FenceForm.cs">
       <SubType>Form</SubType>
@@ -89,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="crypto\BaseWhatForm.resx">
+      <DependentUpon>BaseWhatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crypto\CeasarForm.resx">
       <DependentUpon>CeasarForm.cs</DependentUpon>
     </EmbeddedResource>

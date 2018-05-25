@@ -46,5 +46,11 @@ namespace CTF_Crypto_Tool
             crypto.MD5Form md5f = new crypto.MD5Form();
             md5f.ShowDialog();
         }
+
+        private void buttonBase_Click(object sender, EventArgs e)
+        {
+            crypto.BaseWhatForm bwf = new crypto.BaseWhatForm();
+            bwf.ShowDialog();
+        }
     }
 }

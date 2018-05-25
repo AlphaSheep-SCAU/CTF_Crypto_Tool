@@ -33,6 +33,7 @@
             this.buttonVigenereForm = new System.Windows.Forms.Button();
             this.buttonMorseForm = new System.Windows.Forms.Button();
             this.buttonMD5 = new System.Windows.Forms.Button();
+            this.buttonBase = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCeasarForm
@@ -85,11 +86,22 @@
             this.buttonMD5.UseVisualStyleBackColor = true;
             this.buttonMD5.Click += new System.EventHandler(this.buttonMD5_Click);
             // 
+            // buttonBase
+            // 
+            this.buttonBase.Location = new System.Drawing.Point(664, 62);
+            this.buttonBase.Name = "buttonBase";
+            this.buttonBase.Size = new System.Drawing.Size(120, 34);
+            this.buttonBase.TabIndex = 5;
+            this.buttonBase.Text = "Base加密";
+            this.buttonBase.UseVisualStyleBackColor = true;
+            this.buttonBase.Click += new System.EventHandler(this.buttonBase_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 554);
+            this.Controls.Add(this.buttonBase);
             this.Controls.Add(this.buttonMD5);
             this.Controls.Add(this.buttonMorseForm);
             this.Controls.Add(this.buttonVigenereForm);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Button buttonVigenereForm;
         private System.Windows.Forms.Button buttonMorseForm;
         private System.Windows.Forms.Button buttonMD5;
+        private System.Windows.Forms.Button buttonBase;
     }
 }
 

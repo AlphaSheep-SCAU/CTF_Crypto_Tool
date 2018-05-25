@@ -29,6 +29,13 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
             get { return clearText; }
         }
 
+        public Crypto()
+        {
+            message = "";
+            cipherText = "";
+            clearText = "";
+        }
+
         public Crypto(string message)
         {
             this.message = message;
