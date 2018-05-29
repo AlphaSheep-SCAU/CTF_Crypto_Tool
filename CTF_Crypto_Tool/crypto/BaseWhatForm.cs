@@ -12,7 +12,9 @@ namespace CTF_Crypto_Tool.crypto
 {
     public partial class BaseWhatForm : Form
     {
-        private cryptocs.Base64Crypto cry;
+        private cryptocs.Base64Crypto cry64;
+        private cryptocs.Base32Crypto cry32;
+        private cryptocs.Base16Crypto cry16;
         private string message;
         private int mode;
 
@@ -20,30 +22,56 @@ namespace CTF_Crypto_Tool.crypto
         {
             InitializeComponent();
             message = "";
-            cry = new cryptocs.Base64Crypto();
+            cry64 = new cryptocs.Base64Crypto();
+            cry32 = new cryptocs.Base32Crypto();
+            cry16 = new cryptocs.Base16Crypto();
             rb64.Checked = true;
             mode = 0;
         }
 
         private void buttonEncrypt_Click(object sender, EventArgs e)
         {
+            message = textBoxMessage.Text;
             if (mode == 0)
             {
-                message = textBoxMessage.Text;
-                cry.Message = message;
-                cry.Encrypt();
-                textBoxResult.Text = cry.CipherText;
+                cry64.Message = message;
+                cry64.Encrypt();
+                textBoxResult.Text = cry64.CipherText;
+            }
+            else if(mode == 1)
+            {
+                cry32.Message = message;
+                cry32.Encrypt();
+                textBoxResult.Text = cry32.CipherText;
+            }
+            else if(mode == 2)
+            {
+                cry16.Message = message;
+                cry16.Encrypt();
+                textBoxResult.Text = cry16.CipherText;
             }
         }
 
         private void buttonDecrypt_Click(object sender, EventArgs e)
         {
+            message = textBoxMessage.Text;
             if (mode == 0)
             {
-                message = textBoxMessage.Text;
-                cry.Message = message;
-                cry.Decrypt();
-                textBoxResult.Text = cry.ClearText;
+                cry64.Message = message;
+                cry64.Decrypt();
+                textBoxResult.Text = cry64.ClearText;
+            }
+            else if(mode == 1)
+            {
+                cry32.Message = message;
+                cry32.Decrypt();
+                textBoxResult.Text = cry32.ClearText;
+            }
+            else if(mode == 2)
+            {
+                cry16.Message = message;
+                cry16.Decrypt();
+                textBoxResult.Text = cry16.ClearText;
             }
         }
 

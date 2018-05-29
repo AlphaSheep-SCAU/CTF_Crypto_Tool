@@ -58,6 +58,8 @@
     <Compile Include="crypto\CeasarForm.Designer.cs">
       <DependentUpon>CeasarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crypto\cryptocs\Base16Crypto.cs" />
+    <Compile Include="crypto\cryptocs\Base32Crypto.cs" />
     <Compile Include="crypto\cryptocs\Base64Crypto.cs" />
     <Compile Include="crypto\cryptocs\CeasarCrypto.cs" />
     <Compile Include="crypto\cryptocs\Crypto.cs" />

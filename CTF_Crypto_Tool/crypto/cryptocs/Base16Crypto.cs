@@ -6,31 +6,22 @@ using System.Threading.Tasks;
 
 namespace CTF_Crypto_Tool.crypto.cryptocs
 {
-    class Base64Crypto : Crypto
+    class Base16Crypto : Crypto
     {
-        private List<char> Base64IndexTable;
+        private List<char> Base16IndexTable;
 
-        public Base64Crypto(string message) : base(message)
-        {
-            GenerateIndexTable();
-        }
-
-        public Base64Crypto() : base()
+        public Base16Crypto() : base()
         {
             GenerateIndexTable();
         }
 
         private void GenerateIndexTable()
         {
-            Base64IndexTable = new List<char>();
-            for (char i = 'A'; i <= 'Z'; i++) 
-                Base64IndexTable.Add(i);
-            for (char i = 'a'; i <= 'z'; i++)
-                Base64IndexTable.Add(i);
+            Base16IndexTable = new List<char>();
             for (char i = '0'; i <= '9'; i++)
-                Base64IndexTable.Add(i);
-            Base64IndexTable.Add('+');
-            Base64IndexTable.Add('/');
+                Base16IndexTable.Add(i);
+            for (char i = 'A'; i <= 'F'; i++)
+                Base16IndexTable.Add(i);
         }
 
         private string Int2Bin8(int number)
@@ -41,10 +32,10 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
             return bin;
         }
 
-        private string Int2Bin6(int number)
+        private string Int2Bin4(int number)
         {
             string bin = Convert.ToString(number, 2);
-            while (bin.Length < 6)
+            while (bin.Length < 4)
                 bin = '0' + bin;
             return bin;
         }
@@ -55,16 +46,12 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
             string binString = "";
             for (int i = 0; i < message.Length; i++)
                 binString += Int2Bin8(message[i]);
-            while (binString.Length % 6 != 0)
-                binString += '0';
-            for (int j = 0; j < binString.Length; j += 6)
+            for (int j = 0; j < binString.Length; j += 4)
             {
-                string t = binString.Substring(j, 6);
+                string t = binString.Substring(j, 4);
                 int index = Convert.ToInt32(t, 2);
-                cipherText += Base64IndexTable[index];
+                cipherText += Base16IndexTable[index];
             }
-            while (cipherText.Length % 4 != 0)
-                cipherText += '=';
         }
 
         public override void Decrypt()
@@ -73,12 +60,8 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
             string binString = "";
             for (int i = 0; i < message.Length; i++)
             {
-                if (message[i] == '=')
-                    continue;
-                binString += Int2Bin6(Base64IndexTable.IndexOf(message[i]));
+                binString += Int2Bin4(Base16IndexTable.IndexOf(message[i]));
             }
-            while (binString.Length % 8 != 0)
-                binString = binString.Substring(0, binString.Length - 1);
             for (int j = 0; j < binString.Length; j += 8)
             {
                 string t = binString.Substring(j, 8);

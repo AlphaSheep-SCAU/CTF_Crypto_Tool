@@ -35,9 +35,9 @@
             this.buttonDecrypt = new System.Windows.Forms.Button();
             this.buttonEncrypt = new System.Windows.Forms.Button();
             this.panelMode = new System.Windows.Forms.Panel();
-            this.rb64 = new System.Windows.Forms.RadioButton();
-            this.rb32 = new System.Windows.Forms.RadioButton();
             this.rb16 = new System.Windows.Forms.RadioButton();
+            this.rb32 = new System.Windows.Forms.RadioButton();
+            this.rb64 = new System.Windows.Forms.RadioButton();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.panelMode.SuspendLayout();
             this.SuspendLayout();
@@ -113,16 +113,17 @@
             this.panelMode.Size = new System.Drawing.Size(357, 30);
             this.panelMode.TabIndex = 11;
             // 
-            // rb64
+            // rb16
             // 
-            this.rb64.AutoSize = true;
-            this.rb64.Location = new System.Drawing.Point(19, 5);
-            this.rb64.Name = "rb64";
-            this.rb64.Size = new System.Drawing.Size(76, 19);
-            this.rb64.TabIndex = 0;
-            this.rb64.TabStop = true;
-            this.rb64.Text = "Base64";
-            this.rb64.UseVisualStyleBackColor = true;
+            this.rb16.AutoSize = true;
+            this.rb16.Location = new System.Drawing.Point(249, 5);
+            this.rb16.Name = "rb16";
+            this.rb16.Size = new System.Drawing.Size(76, 19);
+            this.rb16.TabIndex = 2;
+            this.rb16.TabStop = true;
+            this.rb16.Text = "Base16";
+            this.rb16.UseVisualStyleBackColor = true;
+            this.rb16.CheckedChanged += new System.EventHandler(this.rb_CheckedChanged);
             // 
             // rb32
             // 
@@ -134,17 +135,19 @@
             this.rb32.TabStop = true;
             this.rb32.Text = "Base32";
             this.rb32.UseVisualStyleBackColor = true;
+            this.rb32.CheckedChanged += new System.EventHandler(this.rb_CheckedChanged);
             // 
-            // rb16
+            // rb64
             // 
-            this.rb16.AutoSize = true;
-            this.rb16.Location = new System.Drawing.Point(249, 5);
-            this.rb16.Name = "rb16";
-            this.rb16.Size = new System.Drawing.Size(76, 19);
-            this.rb16.TabIndex = 2;
-            this.rb16.TabStop = true;
-            this.rb16.Text = "Base16";
-            this.rb16.UseVisualStyleBackColor = true;
+            this.rb64.AutoSize = true;
+            this.rb64.Location = new System.Drawing.Point(19, 5);
+            this.rb64.Name = "rb64";
+            this.rb64.Size = new System.Drawing.Size(76, 19);
+            this.rb64.TabIndex = 0;
+            this.rb64.TabStop = true;
+            this.rb64.Text = "Base64";
+            this.rb64.UseVisualStyleBackColor = true;
+            this.rb64.CheckedChanged += new System.EventHandler(this.rb_CheckedChanged);
             // 
             // textBoxResult
             // 
