@@ -13,3 +13,4 @@ G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.Vigenere
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.MorseForm.resources
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.MD5Form.resources
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.BaseWhatForm.resources
+G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.BaconForm.resources

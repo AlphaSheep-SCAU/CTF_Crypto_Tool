@@ -32,8 +32,9 @@
             this.buttonFenceForm = new System.Windows.Forms.Button();
             this.buttonVigenereForm = new System.Windows.Forms.Button();
             this.buttonMorseForm = new System.Windows.Forms.Button();
-            this.buttonMD5 = new System.Windows.Forms.Button();
-            this.buttonBase = new System.Windows.Forms.Button();
+            this.buttonMD5Form = new System.Windows.Forms.Button();
+            this.buttonBaseForm = new System.Windows.Forms.Button();
+            this.buttonBaconForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCeasarForm
@@ -76,33 +77,44 @@
             this.buttonMorseForm.UseVisualStyleBackColor = true;
             this.buttonMorseForm.Click += new System.EventHandler(this.buttonMorseForm_Click);
             // 
-            // buttonMD5
+            // buttonMD5Form
             // 
-            this.buttonMD5.Location = new System.Drawing.Point(538, 62);
-            this.buttonMD5.Name = "buttonMD5";
-            this.buttonMD5.Size = new System.Drawing.Size(120, 34);
-            this.buttonMD5.TabIndex = 4;
-            this.buttonMD5.Text = "MD5加密";
-            this.buttonMD5.UseVisualStyleBackColor = true;
-            this.buttonMD5.Click += new System.EventHandler(this.buttonMD5_Click);
+            this.buttonMD5Form.Location = new System.Drawing.Point(34, 102);
+            this.buttonMD5Form.Name = "buttonMD5Form";
+            this.buttonMD5Form.Size = new System.Drawing.Size(120, 34);
+            this.buttonMD5Form.TabIndex = 4;
+            this.buttonMD5Form.Text = "MD5加密";
+            this.buttonMD5Form.UseVisualStyleBackColor = true;
+            this.buttonMD5Form.Click += new System.EventHandler(this.buttonMD5_Click);
             // 
-            // buttonBase
+            // buttonBaseForm
             // 
-            this.buttonBase.Location = new System.Drawing.Point(664, 62);
-            this.buttonBase.Name = "buttonBase";
-            this.buttonBase.Size = new System.Drawing.Size(120, 34);
-            this.buttonBase.TabIndex = 5;
-            this.buttonBase.Text = "Base加密";
-            this.buttonBase.UseVisualStyleBackColor = true;
-            this.buttonBase.Click += new System.EventHandler(this.buttonBase_Click);
+            this.buttonBaseForm.Location = new System.Drawing.Point(160, 102);
+            this.buttonBaseForm.Name = "buttonBaseForm";
+            this.buttonBaseForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonBaseForm.TabIndex = 5;
+            this.buttonBaseForm.Text = "Base加密";
+            this.buttonBaseForm.UseVisualStyleBackColor = true;
+            this.buttonBaseForm.Click += new System.EventHandler(this.buttonBase_Click);
+            // 
+            // buttonBaconForm
+            // 
+            this.buttonBaconForm.Location = new System.Drawing.Point(286, 102);
+            this.buttonBaconForm.Name = "buttonBaconForm";
+            this.buttonBaconForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonBaconForm.TabIndex = 6;
+            this.buttonBaconForm.Text = "培根加密";
+            this.buttonBaconForm.UseVisualStyleBackColor = true;
+            this.buttonBaconForm.Click += new System.EventHandler(this.buttonBaconForm_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1025, 554);
-            this.Controls.Add(this.buttonBase);
-            this.Controls.Add(this.buttonMD5);
+            this.ClientSize = new System.Drawing.Size(594, 554);
+            this.Controls.Add(this.buttonBaconForm);
+            this.Controls.Add(this.buttonBaseForm);
+            this.Controls.Add(this.buttonMD5Form);
             this.Controls.Add(this.buttonMorseForm);
             this.Controls.Add(this.buttonVigenereForm);
             this.Controls.Add(this.buttonFenceForm);
@@ -120,8 +132,9 @@
         private System.Windows.Forms.Button buttonFenceForm;
         private System.Windows.Forms.Button buttonVigenereForm;
         private System.Windows.Forms.Button buttonMorseForm;
-        private System.Windows.Forms.Button buttonMD5;
-        private System.Windows.Forms.Button buttonBase;
+        private System.Windows.Forms.Button buttonMD5Form;
+        private System.Windows.Forms.Button buttonBaseForm;
+        private System.Windows.Forms.Button buttonBaconForm;
     }
 }
 

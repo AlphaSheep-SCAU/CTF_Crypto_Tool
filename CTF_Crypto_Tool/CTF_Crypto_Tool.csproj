@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crypto\BaconForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crypto\BaconForm.Designer.cs">
+      <DependentUpon>BaconForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crypto\BaseWhatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,7 @@
     <Compile Include="crypto\CeasarForm.Designer.cs">
       <DependentUpon>CeasarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crypto\cryptocs\BaconCrypto.cs" />
     <Compile Include="crypto\cryptocs\Base16Crypto.cs" />
     <Compile Include="crypto\cryptocs\Base32Crypto.cs" />
     <Compile Include="crypto\cryptocs\Base64Crypto.cs" />
@@ -99,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="crypto\BaconForm.resx">
+      <DependentUpon>BaconForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crypto\BaseWhatForm.resx">
       <DependentUpon>BaseWhatForm.cs</DependentUpon>
     </EmbeddedResource>

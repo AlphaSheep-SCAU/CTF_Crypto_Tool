@@ -32,7 +32,6 @@
             this.labelTip = new System.Windows.Forms.Label();
             this.buttonDecrypt = new System.Windows.Forms.Button();
             this.buttonEncrypt = new System.Windows.Forms.Button();
-            this.buttonShowTable = new System.Windows.Forms.Button();
             this.labelPoint = new System.Windows.Forms.Label();
             this.textBoxDit = new System.Windows.Forms.TextBox();
             this.textBoxDah = new System.Windows.Forms.TextBox();
@@ -40,6 +39,7 @@
             this.textBoxMessage = new System.Windows.Forms.TextBox();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.labelTip2 = new System.Windows.Forms.Label();
+            this.buttonShowTable = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -83,17 +83,6 @@
             this.buttonEncrypt.Text = "加密";
             this.buttonEncrypt.UseVisualStyleBackColor = true;
             this.buttonEncrypt.Click += new System.EventHandler(this.buttonEncrypt_Click);
-            // 
-            // buttonShowTable
-            // 
-            this.buttonShowTable.Font = new System.Drawing.Font("幼圆", 10.8F);
-            this.buttonShowTable.Location = new System.Drawing.Point(174, 129);
-            this.buttonShowTable.Name = "buttonShowTable";
-            this.buttonShowTable.Size = new System.Drawing.Size(107, 30);
-            this.buttonShowTable.TabIndex = 9;
-            this.buttonShowTable.Text = "显示码表";
-            this.buttonShowTable.UseVisualStyleBackColor = true;
-            this.buttonShowTable.Click += new System.EventHandler(this.buttonShowTable_Click);
             // 
             // labelPoint
             // 
@@ -160,6 +149,17 @@
             this.labelTip2.TabIndex = 16;
             this.labelTip2.Text = "解密时密码之间用/隔开,若出现@表示出错";
             // 
+            // buttonShowTable
+            // 
+            this.buttonShowTable.Font = new System.Drawing.Font("幼圆", 10.8F);
+            this.buttonShowTable.Location = new System.Drawing.Point(174, 129);
+            this.buttonShowTable.Name = "buttonShowTable";
+            this.buttonShowTable.Size = new System.Drawing.Size(107, 30);
+            this.buttonShowTable.TabIndex = 9;
+            this.buttonShowTable.Text = "显示码表";
+            this.buttonShowTable.UseVisualStyleBackColor = true;
+            this.buttonShowTable.Click += new System.EventHandler(this.buttonShowTable_Click);
+            // 
             // MorseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -191,7 +191,6 @@
         private System.Windows.Forms.Label labelTip;
         private System.Windows.Forms.Button buttonDecrypt;
         private System.Windows.Forms.Button buttonEncrypt;
-        private System.Windows.Forms.Button buttonShowTable;
         private System.Windows.Forms.Label labelPoint;
         private System.Windows.Forms.TextBox textBoxDit;
         private System.Windows.Forms.TextBox textBoxDah;
@@ -199,5 +198,6 @@
         private System.Windows.Forms.TextBox textBoxMessage;
         private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.Label labelTip2;
+        private System.Windows.Forms.Button buttonShowTable;
     }
 }

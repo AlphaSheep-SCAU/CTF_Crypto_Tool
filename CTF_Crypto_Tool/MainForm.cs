@@ -52,5 +52,11 @@ namespace CTF_Crypto_Tool
             crypto.BaseWhatForm bwf = new crypto.BaseWhatForm();
             bwf.ShowDialog();
         }
+
+        private void buttonBaconForm_Click(object sender, EventArgs e)
+        {
+            crypto.BaconForm bf = new crypto.BaconForm();
+            bf.ShowDialog();
+        }
     }
 }
