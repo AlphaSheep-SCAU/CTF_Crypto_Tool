@@ -58,5 +58,11 @@ namespace CTF_Crypto_Tool
             crypto.BaconForm bf = new crypto.BaconForm();
             bf.ShowDialog();
         }
+
+        private void buttonPlayFairForm_Click(object sender, EventArgs e)
+        {
+            crypto.PlayFairForm pff = new crypto.PlayFairForm();
+            pff.ShowDialog();
+        }
     }
 }

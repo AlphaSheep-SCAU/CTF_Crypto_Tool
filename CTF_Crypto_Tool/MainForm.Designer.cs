@@ -35,6 +35,7 @@
             this.buttonMD5Form = new System.Windows.Forms.Button();
             this.buttonBaseForm = new System.Windows.Forms.Button();
             this.buttonBaconForm = new System.Windows.Forms.Button();
+            this.buttonPlayFairForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCeasarForm
@@ -107,11 +108,22 @@
             this.buttonBaconForm.UseVisualStyleBackColor = true;
             this.buttonBaconForm.Click += new System.EventHandler(this.buttonBaconForm_Click);
             // 
+            // buttonPlayFairForm
+            // 
+            this.buttonPlayFairForm.Location = new System.Drawing.Point(412, 102);
+            this.buttonPlayFairForm.Name = "buttonPlayFairForm";
+            this.buttonPlayFairForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonPlayFairForm.TabIndex = 7;
+            this.buttonPlayFairForm.Text = "Playfair加密";
+            this.buttonPlayFairForm.UseVisualStyleBackColor = true;
+            this.buttonPlayFairForm.Click += new System.EventHandler(this.buttonPlayFairForm_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 554);
+            this.Controls.Add(this.buttonPlayFairForm);
             this.Controls.Add(this.buttonBaconForm);
             this.Controls.Add(this.buttonBaseForm);
             this.Controls.Add(this.buttonMD5Form);
@@ -135,6 +147,7 @@
         private System.Windows.Forms.Button buttonMD5Form;
         private System.Windows.Forms.Button buttonBaseForm;
         private System.Windows.Forms.Button buttonBaconForm;
+        private System.Windows.Forms.Button buttonPlayFairForm;
     }
 }
 

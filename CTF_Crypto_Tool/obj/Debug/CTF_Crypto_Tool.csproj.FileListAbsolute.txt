@@ -14,3 +14,4 @@ G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.MorseFor
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.MD5Form.resources
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.BaseWhatForm.resources
 G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.BaconForm.resources
+G:\ctf\CTF_Crypto_Tool\CTF_Crypto_Tool\obj\Debug\CTF_Crypto_Tool.crypto.PlayFairForm.resources

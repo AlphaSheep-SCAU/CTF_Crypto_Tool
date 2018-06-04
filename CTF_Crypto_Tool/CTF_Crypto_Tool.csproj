@@ -72,6 +72,7 @@
     <Compile Include="crypto\cryptocs\Crypto.cs" />
     <Compile Include="crypto\cryptocs\FenceCrypto.cs" />
     <Compile Include="crypto\cryptocs\MorseCrypto.cs" />
+    <Compile Include="crypto\cryptocs\PlayFairCrypto.cs" />
     <Compile Include="crypto\cryptocs\VigenereCrypto.cs" />
     <Compile Include="crypto\FenceForm.cs">
       <SubType>Form</SubType>
@@ -90,6 +91,12 @@
     </Compile>
     <Compile Include="crypto\MorseForm.Designer.cs">
       <DependentUpon>MorseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="crypto\PlayFairForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crypto\PlayFairForm.Designer.cs">
+      <DependentUpon>PlayFairForm.cs</DependentUpon>
     </Compile>
     <Compile Include="crypto\VigenereForm.cs">
       <SubType>Form</SubType>
@@ -123,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crypto\MorseForm.resx">
       <DependentUpon>MorseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crypto\PlayFairForm.resx">
+      <DependentUpon>PlayFairForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crypto\VigenereForm.resx">
       <DependentUpon>VigenereForm.cs</DependentUpon>
