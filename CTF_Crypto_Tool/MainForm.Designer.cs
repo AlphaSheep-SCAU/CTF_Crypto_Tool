@@ -40,9 +40,10 @@
             // 
             // buttonCeasarForm
             // 
-            this.buttonCeasarForm.Location = new System.Drawing.Point(34, 62);
+            this.buttonCeasarForm.Location = new System.Drawing.Point(26, 50);
+            this.buttonCeasarForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCeasarForm.Name = "buttonCeasarForm";
-            this.buttonCeasarForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonCeasarForm.Size = new System.Drawing.Size(90, 27);
             this.buttonCeasarForm.TabIndex = 0;
             this.buttonCeasarForm.Text = "凯撒密码";
             this.buttonCeasarForm.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@
             // 
             // buttonFenceForm
             // 
-            this.buttonFenceForm.Location = new System.Drawing.Point(160, 62);
+            this.buttonFenceForm.Location = new System.Drawing.Point(120, 50);
+            this.buttonFenceForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonFenceForm.Name = "buttonFenceForm";
-            this.buttonFenceForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonFenceForm.Size = new System.Drawing.Size(90, 27);
             this.buttonFenceForm.TabIndex = 1;
             this.buttonFenceForm.Text = "栅栏密码";
             this.buttonFenceForm.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // 
             // buttonVigenereForm
             // 
-            this.buttonVigenereForm.Location = new System.Drawing.Point(286, 62);
+            this.buttonVigenereForm.Location = new System.Drawing.Point(214, 50);
+            this.buttonVigenereForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonVigenereForm.Name = "buttonVigenereForm";
-            this.buttonVigenereForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonVigenereForm.Size = new System.Drawing.Size(90, 27);
             this.buttonVigenereForm.TabIndex = 2;
             this.buttonVigenereForm.Text = "维吉利亚密码";
             this.buttonVigenereForm.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // 
             // buttonMorseForm
             // 
-            this.buttonMorseForm.Location = new System.Drawing.Point(412, 62);
+            this.buttonMorseForm.Location = new System.Drawing.Point(309, 50);
+            this.buttonMorseForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonMorseForm.Name = "buttonMorseForm";
-            this.buttonMorseForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonMorseForm.Size = new System.Drawing.Size(90, 27);
             this.buttonMorseForm.TabIndex = 3;
             this.buttonMorseForm.Text = "摩斯密码";
             this.buttonMorseForm.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             // buttonMD5Form
             // 
-            this.buttonMD5Form.Location = new System.Drawing.Point(34, 102);
+            this.buttonMD5Form.Location = new System.Drawing.Point(26, 82);
+            this.buttonMD5Form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonMD5Form.Name = "buttonMD5Form";
-            this.buttonMD5Form.Size = new System.Drawing.Size(120, 34);
+            this.buttonMD5Form.Size = new System.Drawing.Size(90, 27);
             this.buttonMD5Form.TabIndex = 4;
             this.buttonMD5Form.Text = "MD5加密";
             this.buttonMD5Form.UseVisualStyleBackColor = true;
@@ -90,9 +95,10 @@
             // 
             // buttonBaseForm
             // 
-            this.buttonBaseForm.Location = new System.Drawing.Point(160, 102);
+            this.buttonBaseForm.Location = new System.Drawing.Point(120, 82);
+            this.buttonBaseForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBaseForm.Name = "buttonBaseForm";
-            this.buttonBaseForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonBaseForm.Size = new System.Drawing.Size(90, 27);
             this.buttonBaseForm.TabIndex = 5;
             this.buttonBaseForm.Text = "Base加密";
             this.buttonBaseForm.UseVisualStyleBackColor = true;
@@ -100,9 +106,10 @@
             // 
             // buttonBaconForm
             // 
-            this.buttonBaconForm.Location = new System.Drawing.Point(286, 102);
+            this.buttonBaconForm.Location = new System.Drawing.Point(214, 82);
+            this.buttonBaconForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBaconForm.Name = "buttonBaconForm";
-            this.buttonBaconForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonBaconForm.Size = new System.Drawing.Size(90, 27);
             this.buttonBaconForm.TabIndex = 6;
             this.buttonBaconForm.Text = "培根加密";
             this.buttonBaconForm.UseVisualStyleBackColor = true;
@@ -110,9 +117,10 @@
             // 
             // buttonPlayFairForm
             // 
-            this.buttonPlayFairForm.Location = new System.Drawing.Point(412, 102);
+            this.buttonPlayFairForm.Location = new System.Drawing.Point(309, 82);
+            this.buttonPlayFairForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonPlayFairForm.Name = "buttonPlayFairForm";
-            this.buttonPlayFairForm.Size = new System.Drawing.Size(120, 34);
+            this.buttonPlayFairForm.Size = new System.Drawing.Size(90, 27);
             this.buttonPlayFairForm.TabIndex = 7;
             this.buttonPlayFairForm.Text = "Playfair加密";
             this.buttonPlayFairForm.UseVisualStyleBackColor = true;
@@ -120,9 +128,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 554);
+            this.ClientSize = new System.Drawing.Size(446, 155);
             this.Controls.Add(this.buttonPlayFairForm);
             this.Controls.Add(this.buttonBaconForm);
             this.Controls.Add(this.buttonBaseForm);
@@ -131,9 +139,10 @@
             this.Controls.Add(this.buttonVigenereForm);
             this.Controls.Add(this.buttonFenceForm);
             this.Controls.Add(this.buttonCeasarForm);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "CTF_Crypto";
             this.ResumeLayout(false);
 
         }

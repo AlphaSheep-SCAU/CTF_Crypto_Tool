@@ -8,7 +8,7 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
 {
     class CeasarCrypto : Crypto
     {
-        private int shiftNumber;
+        private int shiftNumber;//偏移量
 
         public CeasarCrypto(string message,int shiftNumber) : base(message)
         {

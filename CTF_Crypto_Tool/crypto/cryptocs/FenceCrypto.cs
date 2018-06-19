@@ -8,8 +8,8 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
 {
     class FenceCrypto : Crypto
     {
-        private int group;
-        private int lenMessage;
+        private int group;//用户需要分成的组数
+        private int lenMessage;//用户需要加解密的信息的长度
 
         public FenceCrypto(string message,int group) : base(message)
         {
@@ -56,19 +56,19 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
         public override void Encrypt()
         {
             cipherText = "";
-            int lenTArr = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(lenMessage) / group));
+            int lenTArr = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(lenMessage) / group));//每组的长度
             string tMessage = message;
-            for(int i = 0; i < lenTArr * group - lenMessage; i++)
+            for(int i = 0; i < lenTArr * group - lenMessage; i++)//若组数*每组长度≠信息的长度，就用'@'补齐
                 tMessage += "@";
             string[] tArr = new string[lenTArr];
-            tArr = ClearZero(tArr);
+            tArr = ClearZero(tArr);//把string数组的每一项变为空字符串
             for (int i = 0; i < lenTArr; i++)
             {
-                tArr[i] = tMessage.Substring(i * group, group);
+                tArr[i] = tMessage.Substring(i * group, group);//开始分组
             }
             for (int i = 0; i < group; i++)
                 for(int j = 0; j < lenTArr; j++)
-                    cipherText += tArr[j][i];
+                    cipherText += tArr[j][i];//每一组的字符组合
         }
 
         public override void Decrypt()

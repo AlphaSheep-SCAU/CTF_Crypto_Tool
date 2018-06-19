@@ -8,39 +8,52 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
 {
     class VigenereCrypto : Crypto
     {
-        private string key;
-        readonly string[] cryptoTable;
+        private string key;//加解密的密钥
+        readonly string[] cryptoTable;//加密表
 
         public VigenereCrypto(string message, string key) : base(message)
         {
             this.key = key;
-            cryptoTable = new string[26] {  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                                            "BCDEFGHIJKLMNOPQRSTUVWXYZA",
-                                            "CDEFGHIJKLMNOPQRSTUVWXYZAB",
-                                            "DEFGHIJKLMNOPQRSTUVWXYZABC",
-                                            "EFGHIJKLMNOPQRSTUVWXYZABCD",
-                                            "FGHIJKLMNOPQRSTUVWXYZABCDE",
-                                            "GHIJKLMNOPQRSTUVWXYZABCDEF",
-                                            "HIJKLMNOPQRSTUVWXYZABCDEFG",
-                                            "IJKLMNOPQRSTUVWXYZABCDEFGH",
-                                            "JKLMNOPQRSTUVWXYZABCDEFGHI",
-                                            "KLMNOPQRSTUVWXYZABCDEFGHIJ",
-                                            "LMNOPQRSTUVWXYZABCDEFGHIJK",
-                                            "MNOPQRSTUVWXYZABCDEFGHIJKL",
-                                            "NOPQRSTUVWXYZABCDEFGHIJKLM",
-                                            "OPQRSTUVWXYZABCDEFGHIJKLMN",
-                                            "PQRSTUVWXYZABCDEFGHIJKLMNO",
-                                            "QRSTUVWXYZABCDEFGHIJKLMNOP",
-                                            "RSTUVWXYZABCDEFGHIJKLMNOPQ",
-                                            "STUVWXYZABCDEFGHIJKLMNOPQR",
-                                            "TUVWXYZABCDEFGHIJKLMNOPQRS",
-                                            "UVWXYZABCDEFGHIJKLMNOPQRST",
-                                            "VWXYZABCDEFGHIJKLMNOPQRSTU",
-                                            "WXYZABCDEFGHIJKLMNOPQRSTUV",
-                                            "XYZABCDEFGHIJKLMNOPQRSTUVW",
-                                            "YZABCDEFGHIJKLMNOPQRSTUVWX",
-                                            "ZABCDEFGHIJKLMNOPQRSTUVWXY"
-                                          };
+            string str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            cryptoTable = new string[26];
+            cryptoTable[0] = str;
+            CeasarCrypto cc = new CeasarCrypto(str, 1);
+            for (int i = 1; i < 26; i++)
+            {
+                cc.Encrypt();
+                cryptoTable[i] = cc.CipherText;
+                cc.ShiftNumber++;
+                Console.WriteLine(cryptoTable[i]);
+            }
+            
+            //cryptoTable = new string[26] {  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            //                                "BCDEFGHIJKLMNOPQRSTUVWXYZA",
+            //                                "CDEFGHIJKLMNOPQRSTUVWXYZAB",
+            //                                "DEFGHIJKLMNOPQRSTUVWXYZABC",
+            //                                "EFGHIJKLMNOPQRSTUVWXYZABCD",
+            //                                "FGHIJKLMNOPQRSTUVWXYZABCDE",
+            //                                "GHIJKLMNOPQRSTUVWXYZABCDEF",
+            //                                "HIJKLMNOPQRSTUVWXYZABCDEFG",
+            //                                "IJKLMNOPQRSTUVWXYZABCDEFGH",
+            //                                "JKLMNOPQRSTUVWXYZABCDEFGHI",
+            //                                "KLMNOPQRSTUVWXYZABCDEFGHIJ",
+            //                                "LMNOPQRSTUVWXYZABCDEFGHIJK",
+            //                                "MNOPQRSTUVWXYZABCDEFGHIJKL",
+            //                                "NOPQRSTUVWXYZABCDEFGHIJKLM",
+            //                                "OPQRSTUVWXYZABCDEFGHIJKLMN",
+            //                                "PQRSTUVWXYZABCDEFGHIJKLMNO",
+            //                                "QRSTUVWXYZABCDEFGHIJKLMNOP",
+            //                                "RSTUVWXYZABCDEFGHIJKLMNOPQ",
+            //                                "STUVWXYZABCDEFGHIJKLMNOPQR",
+            //                                "TUVWXYZABCDEFGHIJKLMNOPQRS",
+            //                                "UVWXYZABCDEFGHIJKLMNOPQRST",
+            //                                "VWXYZABCDEFGHIJKLMNOPQRSTU",
+            //                                "WXYZABCDEFGHIJKLMNOPQRSTUV",
+            //                                "XYZABCDEFGHIJKLMNOPQRSTUVW",
+            //                                "YZABCDEFGHIJKLMNOPQRSTUVWX",
+            //                                "ZABCDEFGHIJKLMNOPQRSTUVWXY"
+            //                              };
+
         }
 
         #region 访问器&&修改器
@@ -114,7 +127,7 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
                 char ct;
                 try
                 {
-                    ct = cryptoTable[0][cryptoTable[key[keyIndex] % 'A'].IndexOf(message[i])];
+                    ct = cryptoTable[0][cryptoTable[key[keyIndex] % 'A'].IndexOf(tMessage[i])];
                     if (message[i] >= 'a' && message[i] <= 'z')
                         ct = ct.ToString().ToLower()[0];
                     clearText += ct;

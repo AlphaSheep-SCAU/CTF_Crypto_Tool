@@ -8,9 +8,9 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
 {
     class Crypto
     {
-        protected string message;
-        protected string clearText;
-        protected string cipherText;
+        protected string message;//用户需要加密或解密的信息
+        protected string clearText;//明文
+        protected string cipherText;//密文
 
         public virtual string Message
         {
@@ -21,7 +21,6 @@ namespace CTF_Crypto_Tool.crypto.cryptocs
         public virtual string CipherText
         {
             get { return cipherText; }
-            //set { cipher = value; }
         }
 
         public virtual string ClearText
